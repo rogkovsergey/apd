@@ -6,23 +6,24 @@
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 
-<body ng-app="a-p-d" ng-controller="formCtrl">
+<body ng-app="apd" ng-controller="formCtrl">
 
-<form  ng-submit="">
+<form ng-submit="">
 	<p>User ID: {{user.post_id}}</p>
 	User name: <input type="text" name="name" ng-model="user.name">{{user.name}}<br>
 	User surname: <input type="text" name="surname" ng-model="user.surname">{{user.surname}}<br>
 	<input type="submit" name="submit" id="submit" value="Submit" ng-click="submit(user)">
-	<p>User ID:{{answer.id}}</p>
-	<p>User name:{{answer.name}}</p>
-	<p>User surname:{{answer.surname}}</p>
 </form>
+<input type="button" name="selectAll" value="Select All" ng-click="select()">
+	<p>User ID:{{result.id}}</p>
+	<p>User name:{{result.name}}</p>
+	<p>User surname:{{result.surname}}</p>
 
 <input type="button" name="reset" value="Reset" ng-click="reset_db()">
 
 </body>
 
-<script src="a-p-d.js"></script>
-<!-- <script src=""></script> -->
+<script src="apd.js"></script>
+<script src="queryService.js"></script>
 
 </html>

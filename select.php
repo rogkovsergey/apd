@@ -1,12 +1,5 @@
 <?php
-	// require('connect.php');
-	require('insert.php');
-
+	require('connect.php');
 	$selected = $link->query("SELECT * FROM users");
-	
-
-
-	$result = $selected->fetch_assoc();
-
-	echo json_encode($result);
+	echo json_encode($selected->fetch_all(MYSQLI_ASSOC));
 ?>
